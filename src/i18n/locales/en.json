@@ -1,0 +1,42 @@
+{
+  "language": {
+    "select": "🌍 Select language:\n\nPlease choose your preferred language for interacting with the bot.",
+    "selected": "✅ Language successfully changed to English!"
+  },
+  "welcome": {
+    "first_time": "🎰 Welcome to <b>LuckyStar Casino</b>!\n\nYou receive <b>{balance}</b> starter bonus. Let's spin!\n\n💡 Use buttons below or /help command",
+    "returning": "Welcome back, {name}! 🎲\n\n💰 Your balance: <b>{balance}</b>\n\nReady to test your luck?",
+    "group": "👋 Hi! I'm LuckyStar Casino bot!\n\n📋 <b>Available commands:</b>\n/slots [bet] - Slot machine\n/dice [bet] - Dice duel\n/roulette [bet] [number/color] - Roulette\n/profile - Your stats\n/bonus - Daily bonus\n\n💡 For convenient play with buttons, message me privately: @{username}"
+  },
+  "games": {
+    "private_only": "🔒 Game buttons are only available in private messages!\n\nIn groups use commands:\n• /slots [bet]\n• /dice [bet]\n• /roulette [bet] [number/color]",
+    
+    "slots": {
+      "selected": "🎰 <b>Mode selected: Slots</b>\n\nChoose bet amount or enter your own:",
+      "stake_selected": "💰 Bet: <b>${amount}</b>\n\n🎰 Spinning...",
+      "enter_stake": "💵 Enter bet amount (from ${min} to ${max}):",
+      "invalid_stake": "❌ Invalid bet! Minimum ${min}, maximum ${max}"
+    },
+    
+    "dice": {
+      "selected": "🎲 <b>Mode selected: Dice Duel</b>\n\nChoose bet amount or enter your own:",
+      "stake_selected": "💰 Bet: <b>${amount}</b>\n\n🎲 Starting duel...",
+      "enter_stake": "💵 Enter bet amount (from ${min} to ${max}):"
+    },
+    
+    "roulette": {
+      "selected": "♠️ <b>Mode selected: Roulette</b>\n\nChoose bet amount or enter your own:",
+      "stake_selected": "💰 Bet: <b>${amount}</b>\n\nNow choose your bet:\n🔴 Red (1,3,5,7,9) - x1.8\n⚫ Black (2,4,6,8,10) - x1.8\n🔢 Number (1-10) - x3\n\nOr enter manually (red/black/number):",
+      "enter_bet": "Enter number (1-10), red or black:",
+      "invalid_bet": "❌ Invalid bet! Enter number 1-10, red or black"
+    }
+  },
+  "error": {
+    "invalid_amount": "❌ Invalid amount! Enter a number.",
+    "min_bet": "📉 Minimum bet is <b>${min}</b>",
+    "max_bet": "📈 Maximum bet is <b>${max}</b>",
+    "insufficient_funds": "💸 Insufficient funds!\n\nBalance: <b>${balance}</b>\nNeeded: <b>${needed}</b>",
+    "start_first": "❌ Start the bot first with /start command"
+  },
+  "cancel": "❌ Action cancelled"
+}

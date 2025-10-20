@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: casinobot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: REDIS_URL
+        fromDatabase:
+          name: casinobot-redis
+          property: connectionString
+      - key: ENCRYPTION_KEY
+        generateValue: true
+      - key: STARTER_BONUS
+        value: 10000
+      - key: MIN_BET
+        value: 100
+      - key: MAX_BET
+        value: 100000
+      - key: PORT
+        value: 8000
+      - key: WEBHOOK_URL
+        fromService:
+          type: web
+          name: casinobot
+          property: host
+      - key: WEBHOOK_PATH
+        value: /webhook
+
+  - type: redis
+    name: casinobot-redis
+    plan: free
+    maxmemoryPolicy: allkeys-lru
