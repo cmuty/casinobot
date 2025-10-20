@@ -6,9 +6,14 @@
 
 import asyncio
 import logging
+import sys
+import os
 from datetime import datetime
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
+
+# Добавляем корневую директорию в путь
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Импорты для старой MySQL базы
 from src.database import async_session_maker, init_db as init_mysql_db, close_db as close_mysql_db

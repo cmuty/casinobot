@@ -5,6 +5,12 @@
 
 import asyncio
 import logging
+import sys
+import os
+
+# Добавляем корневую директорию в путь
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from src.redis_db import init_redis, close_redis, db
 from src.models_redis import User, Wallet
 

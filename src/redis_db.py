@@ -2,13 +2,13 @@ import json
 import logging
 from typing import Optional, Dict, Any, List
 from datetime import datetime, timedelta
-import aioredis
+import redis.asyncio as redis
 from src.config import settings
 
 logger = logging.getLogger(__name__)
 
 # Глобальная переменная для Redis соединения
-redis_client: Optional[aioredis.Redis] = None
+redis_client: Optional[redis.Redis] = None
 
 
 class RedisDatabase:
@@ -21,7 +21,7 @@ class RedisDatabase:
         """Подключение к Redis"""
         global redis_client
         try:
-            self.client = aioredis.from_url(
+            self.client = redis.from_url(
                 settings.REDIS_CONNECTION_URL,
                 encoding="utf-8",
                 decode_responses=True
